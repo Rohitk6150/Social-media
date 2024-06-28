@@ -7,12 +7,9 @@ import WelcomeMessage from "./WelcomeMessage";
 const PostList=()=>{
    const{postList, addInitialPosts} = useContext(PostListData);
    const handleGetPostsClick =() =>{
-    fetch('https://dummyjson.com/posts')
+     fetch('https://dummyjson.com/posts')
 .then(res => res.json())
-.then(data => {
-    const homes = Promise.resolve();
-    homes( data =>
-      {addInitialPosts(data.posts)});
+.then(data => {addInitialPosts(data.posts)});
 }
 );
    }
@@ -28,3 +25,10 @@ const PostList=()=>{
 };
 
 export default PostList;
+
+//  fetch('https://dummyjson.com/posts')
+// .then(res => res.json())
+// .then(data => {
+//     const homes = Promise.resolve();
+//     homes( data =>
+//       {addInitialPosts(data.posts)});
