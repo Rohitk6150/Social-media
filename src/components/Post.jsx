@@ -17,7 +17,7 @@ import { PostList } from "../store/post-list-store";
     {post.tags.map((tag)=> (<span key={tag} className="badge text-bg-primary hashtag"> {tag}</span>))
    }
   <div className="alert alert-success reactions" role="alert">
-  This post has been reacted by {post.reactions} peoples
+  This post has been reacted by {post.reactions.likes} peoples
     </div>
   </div>
 </div>
