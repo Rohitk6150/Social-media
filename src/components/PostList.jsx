@@ -5,18 +5,31 @@ import WelcomeMessage from "./WelcomeMessage";
 import LoadingSpinner from "./LoadingSpinner";
 
 const PostList=()=>{
-<<<<<<< HEAD
-   const{postList, fetching} = useContext(PostListData);
-=======
-   const{postList, addInitialPosts} = useContext(PostListData);
-   const handleGetPostsClick =() =>{
-     fetch('https://dummyjson.com/posts')
-.then(res => res.json())
-.then(data => {addInitialPosts(data.posts)});
-}
-);
-   }
->>>>>>> 0ef4a343b5c7bce22055c54e080071b71558c4a4
+   const{postList,fetching} = useContext(PostListData);
+    //const [fetching, setFetching] = useState(false);
+
+   // useEffect(() => {
+   //    setFetching(true);
+   //    const controller = new AbortController();
+   //    const signal = controller.signal;
+
+   //    fetch("https://dummyjson.com/posts" , {signal})
+   //    .then(res => res.json())
+   //    .then(data => {
+   //       addInitialPosts(data.posts);
+   //       setFetching(false);
+   //    });
+   //    return () => {
+   //       controller.abort();
+   //    }
+   // } , []);
+//    const handleGetPostsClick =() =>{
+//      fetch('https://dummyjson.com/posts')
+// .then(res => res.json())
+// .then(data => {addInitialPosts(data.posts)});
+// }
+// );
+//    }
     
    return(
         <>
